@@ -1,0 +1,29 @@
+{
+  "tailwindCSS.experimental.classRegex": [
+    ["/\\*tw\\*/ ([^;]*);", "'([^']*)'"],
+    ["Styles \\=([^;]*);", "'([^']*)'"],
+    ["Styles \\=([^;]*);", "\"([^\"]*)\""],
+    ["Styles \\=([^;]*);", "\\`([^\\`]*)\\`"],
+    ["styles \\=([^;]*);", "'([^']*)'"],
+    ["styles \\=([^;]*);", "\"([^\"]*)\""],
+    ["styles \\=([^;]*);", "\\`([^\\`]*)\\`"]
+  ],
+  "editor.tokenColorCustomizations": {
+    "[Palenight Italic]": {
+      "textMateRules": [
+        {
+          "scope": "entity.name.function",
+          "settings": {
+            "foreground": "#27cb35"
+          }
+        },
+        {
+          "scope": "meta.function-call.ts",
+          "settings": {
+            "foreground": "#27cb35"
+          }
+        }
+      ]
+    }
+  }
+}
