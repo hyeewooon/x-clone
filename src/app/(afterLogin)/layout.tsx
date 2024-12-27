@@ -7,13 +7,15 @@ import SearchForm from "./_components/SearchForm";
 
 export default function AfterLoginLayout({
   children,
+  modal,
 }: {
   children: ReactNode;
+  modal: React.ReactNode;
 }) {
   const styles = {
     container: "flex",
     header: "flex items-end flex-col grow w-[500px]",
-    leftSection: "w-[100px] h-full",
+    leftSection: "h-full",
     leftSectionFixed: "flex flex-col items-center h-full px-2 py-2 fixed",
     content: "flex flex-col grow items-start h-full",
     wrap: "flex justify-between h-full",
@@ -31,6 +33,13 @@ export default function AfterLoginLayout({
             <nav className="flex-1">
               <NavMenu />
             </nav>
+
+            <Link
+              href="/compose/tweet"
+              className="block p-2 mt-4 bg-blue-400 rounded-2xl"
+            >
+              add post
+            </Link>
           </section>
         </div>
       </header>
@@ -46,6 +55,8 @@ export default function AfterLoginLayout({
           </section>
         </div>
       </div>
+
+      <div>{modal}</div>
     </div>
   );
 }

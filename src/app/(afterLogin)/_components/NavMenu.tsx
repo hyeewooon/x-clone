@@ -7,7 +7,7 @@ export default function NavMenu() {
   const segment = useSelectedLayoutSegment();
 
   return (
-    <ul>
+    <ul className="text-end">
       <li>
         <Link href="/home">
           <div
