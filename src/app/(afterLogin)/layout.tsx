@@ -1,16 +1,16 @@
-import { ReactNode } from "react";
+import type { ReactNode } from "react";
 import Link from "next/link";
 
 import NavMenu from "./_components/NavMenu";
+import RightSearchSection from "./_components/RightSearchSection";
 import TrendSection from "./_components/TrendSection";
-import SearchForm from "./_components/SearchForm";
 
 export default function AfterLoginLayout({
   children,
   modal,
 }: {
   children: ReactNode;
-  modal: React.ReactNode;
+  modal: ReactNode;
 }) {
   const styles = {
     container: "flex",
@@ -49,7 +49,7 @@ export default function AfterLoginLayout({
           <main className={styles.main}>{children}</main>
 
           <section className={styles.rightSection}>
-            <SearchForm />
+            <RightSearchSection />
             <TrendSection />
             <div>follow recommend</div>
           </section>

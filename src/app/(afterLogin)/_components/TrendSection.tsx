@@ -15,7 +15,7 @@ export default function TrendSection() {
   if (pathname === "/explore") return null;
 
   return (
-    <div className={styles.container}>
+    <section className={styles.container}>
       <div className="py-3">
         <h3 className={styles.title}>Trends</h3>
 
@@ -26,6 +26,6 @@ export default function TrendSection() {
         <Trend />
         <Trend />
       </div>
-    </div>
+    </section>
   );
 }
