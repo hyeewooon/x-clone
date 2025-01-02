@@ -9,7 +9,7 @@ export default function Home() {
       <TabProvider>
         <Tab />
         <PostForm />
-        <div className="h-[2000px]">
+        <div>
           <Post />
           <Post />
           <Post />

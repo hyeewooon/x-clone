@@ -17,7 +17,7 @@ export default function AfterLoginLayout({
     header: "flex items-end flex-col grow w-[500px]",
     leftSection: "h-full",
     leftSectionFixed: "flex flex-col items-center h-full px-2 py-2 fixed",
-    content: "flex flex-col grow items-start h-full",
+    content: "flex flex-col grow items-start h-dvh",
     wrap: "flex justify-between h-full",
     main: "w-[300px] h-full",
     rightSection: "w-[200px] h-full ml-2",
@@ -56,7 +56,7 @@ export default function AfterLoginLayout({
         </div>
       </div>
 
-      <div>{modal}</div>
+      {modal}
     </div>
   );
 }
