@@ -1,10 +1,10 @@
-import LoginModal from "@/app/(beforeLogin)/_components/LoginModal";
+import SignupModal from "@/app/(beforeLogin)/_components/SignupModal";
 
 export default function Page() {
   return (
     <main>
       signup페이지
-      <LoginModal />
+      <SignupModal />
     </main>
   );
 }

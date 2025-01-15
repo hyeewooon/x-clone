@@ -3,10 +3,16 @@ import PostForm from "./_components/PostForm";
 import Tab from "./_components/Tab";
 import TabProvider from "./_components/TabProvider";
 
-export default async function Home() {
-  const data = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/users`);
+export const dynamic = "force-dynamic";
 
-  console.log("user", await data.json());
+export default async function Home() {
+  try {
+    const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/users`);
+
+    const data = await res.json();
+  } catch (error) {
+    console.log(error);
+  }
 
   return (
     <main className="border border-gray-600">
