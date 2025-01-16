@@ -2,15 +2,18 @@
 
 import { useRouter } from "next/navigation";
 import Main from "../_components/Main";
-import { useEffect } from "react";
+import { useSession } from "next-auth/react";
 
 export default function Login() {
   const router = useRouter();
+  const { data: session } = useSession();
 
-  // url만 변경
-  useEffect(() => {
-    router.replace("/i/flow/login");
-  }, []);
+  if (session?.user) {
+    router.replace("/home");
+    return null;
+  }
+
+  router.replace("/i/flow/login");
 
   // 그대로 해당 화면이 노출됨.
   return <Main />;
