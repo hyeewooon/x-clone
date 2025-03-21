@@ -1,3 +1,11 @@
+## 환경변수
+```
+NEXT_PUBLIC_API_MOCKING=enabled
+NEXT_PUBLIC_BASE_URL=http://localhost:9090
+NEXT_PUBLIC_CLIENT_URL=http://localhost:3000
+AUTH_SECRET
+```
+
 ## Parallel Routes
 
 레이아웃 내에 main페이지와 login모달을 동시에 렌더링
