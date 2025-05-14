@@ -6,7 +6,7 @@ import Trend from "./Trend";
 
 export default function TrendSection() {
   const styles = {
-    container: "mt-3 bg-gray-900 rounded-2xl",
+    container: "bg-gray-900 rounded-2xl my-2",
     title: "mb-3 px-4 text-xl font-bold",
   };
 

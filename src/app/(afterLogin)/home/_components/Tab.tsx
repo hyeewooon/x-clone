@@ -7,7 +7,7 @@ import { TabContext } from "./TabProvider";
 export default function Tab() {
   const styles = {
     container:
-      "w-[298px] backdrop-blur-md z-1 bg-gray-900/50 border-b border-gray-600 fixed top-0 z-10",
+      "w-full backdrop-blur-md z-1 bg-gray-900/50 border-b border-gray-600 sticky top-0 z-10",
     home: "px-4 py-3 font-bold text-xl",
     tab: "flex h-[50px]",
     button: "flex items-center justify-center basis-6/12 text-center relative",

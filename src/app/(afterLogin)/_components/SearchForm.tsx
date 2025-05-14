@@ -9,7 +9,7 @@ type queryParams = {
 
 export default function SearchForm({ q }: queryParams) {
   const styles = {
-    form: "flex items-center h-[42px] mt-1 mb-3 rounded-3xl bg-gray-800",
+    form: "flex items-center h-[42px] rounded-3xl bg-gray-800",
     icon: "flex-none ml-5 fill-white",
     input: "w-full p-3 ml-1 text-sm bg-transparent outline-none border-none",
   };

@@ -13,30 +13,29 @@ export default function AfterLoginLayout({
   modal: ReactNode;
 }) {
   const styles = {
-    container: "flex",
-    header: "flex items-end flex-col grow w-[500px]",
-    leftSection: "h-full",
-    leftSectionFixed: "flex flex-col items-center h-full px-2 py-2 fixed",
-    content: "flex flex-col grow items-start h-dvh",
-    wrap: "flex justify-between h-full",
-    main: "w-[300px] h-full",
-    rightSection: "w-[200px] h-full ml-2",
+    container: "w-full flex px-[100px]",
+    header: "flex-none flex flex-col px-6",
+    leftSection: "flex flex-col items-start",
+    content: "flex flex-col w-full h-screen",
+    wrap: "flex",
+    main: "w-full min-w-[500px] relative",
+    rightSection: "flex-none w-[200px] px-3",
   };
 
   return (
     <div className={styles.container}>
       <header className={styles.header}>
-        <div className={styles.leftSectionFixed}>
+        <div>
           <Link href="/home">~</Link>
 
           <section className={styles.leftSection}>
-            <nav className="flex-1">
+            <nav className="">
               <NavMenu />
             </nav>
 
             <Link
               href="/compose/tweet"
-              className="block p-2 mt-4 bg-blue-400 rounded-2xl"
+              className="w-full block p-2 mt-4 bg-blue-400 rounded-2xl"
             >
               add post
             </Link>
@@ -49,9 +48,11 @@ export default function AfterLoginLayout({
           <main className={styles.main}>{children}</main>
 
           <section className={styles.rightSection}>
-            <RightSearchSection />
-            <TrendSection />
-            <div>follow recommend</div>
+            <div className="sticky top-3">
+              <RightSearchSection />
+              <TrendSection />
+              <div>follow recommend</div>
+            </div>
           </section>
         </div>
       </div>

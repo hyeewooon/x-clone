@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function PostForm() {
   const styles = {
-    form: "flex mt-[104px] p-4 justify-between border-b border-gray-600",
+    form: "flex p-4 justify-between border-b border-gray-600",
     profile:
       "flex-none w-10 h-10 rounded-full overflow-hidden border border-gray-300",
     button:
@@ -21,8 +21,8 @@ export default function PostForm() {
       <div className={styles.profile}>
         <Image src={user.image} alt="profile_image" width={40} height={40} />
       </div>
-      <div className="flex flex-col items-end">
-        <textarea placeholder="무슨 일이 일어나고 있나요?" />
+      <div className="flex flex-col items-end w-full ml-3">
+        <textarea placeholder="무슨 일이 일어나고 있나요?" className="w-full" />
         <button className={styles.button} type="submit">
           submit
         </button>

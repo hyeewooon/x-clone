@@ -15,7 +15,7 @@ export default async function Home() {
   }
 
   return (
-    <main className="border border-gray-600">
+    <div className="border border-gray-600">
       <TabProvider>
         <Tab />
         <PostForm />
@@ -32,6 +32,6 @@ export default async function Home() {
           <Post />
         </div>
       </TabProvider>
-    </main>
+    </div>
   );
 }

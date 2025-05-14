@@ -9,10 +9,8 @@ export default function RightSearchZone() {
   if (pathname === "/search") return null;
 
   return (
-    <section className="mb-[60px]">
-      <div className="w-[200px] fixed">
-        <SearchForm />
-      </div>
+    <section>
+      <SearchForm />
     </section>
   );
 }
