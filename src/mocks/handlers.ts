@@ -20,4 +20,29 @@ export const handlers = [
       lastName: "Maverick",
     });
   }),
+
+  http.get("/get/postRecommends", (req) => {
+    return HttpResponse.json([
+      {
+        postId: 12344,
+        content: "안녕하세요",
+        user: {
+          id: "ksdfjk23",
+          nickname: "유저333",
+          image: faker.image.avatar(),
+        },
+        createdAt: new Date(),
+        images: [
+          {
+            imageId: 1,
+            link: faker.image.urlLoremFlickr(),
+          },
+          {
+            imageId: 2,
+            link: faker.image.urlLoremFlickr(),
+          },
+        ],
+      },
+    ]);
+  }),
 ];
