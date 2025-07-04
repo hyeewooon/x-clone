@@ -4,6 +4,7 @@ import Link from "next/link";
 import NavMenu from "./_components/NavMenu";
 import RightSearchSection from "./_components/RightSearchSection";
 import TrendSection from "./_components/TrendSection";
+import RQProvider from "./_components/RQProvider";
 
 export default function AfterLoginLayout({
   children,
@@ -43,21 +44,23 @@ export default function AfterLoginLayout({
         </div>
       </header>
 
-      <div className={styles.content}>
-        <div className={styles.wrap}>
-          <main className={styles.main}>{children}</main>
+      <RQProvider>
+        <div className={styles.content}>
+          <div className={styles.wrap}>
+            <main className={styles.main}>{children}</main>
 
-          <section className={styles.rightSection}>
-            <div className="sticky top-3">
-              <RightSearchSection />
-              <TrendSection />
-              <div>follow recommend</div>
-            </div>
-          </section>
+            <section className={styles.rightSection}>
+              <div className="sticky top-3">
+                <RightSearchSection />
+                <TrendSection />
+                <div>follow recommend</div>
+              </div>
+            </section>
+          </div>
         </div>
-      </div>
 
-      {modal}
+        {modal}
+      </RQProvider>
     </div>
   );
 }
